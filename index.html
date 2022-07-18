@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./node_modules/feather-icons/dist/feather.js"></script>
+        <script type="module" src="./src/main.js"></script>
+        <title>Winc Film Finder</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="head">
+                <i data-feather="film" class="head__icon"></i>
+                <h1 class="head__title">Winc Film Finder</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <input
+                            type="radio"
+                            name="filter"
+                            class="navbar__radio"
+                            value="latest"
+                            id="latest"
+                        />Latest(2014 and newer)
+                    </li>
+                    <li class="navbar__item">
+                        <input
+                            type="radio"
+                            name="filter"
+                            class="navbar__radio"
+                            value="avenger"
+                            id="avenger"
+                        />Avenger movies
+                    </li>
+                    <li class="navbar__item">
+                        <input
+                            type="radio"
+                            class="navbar__radio"
+                            name="filter"
+                            value="xmen"
+                            id="xmen"
+                        />X-men movies
+                    </li>
+                    <li class="navbar__item">
+                        <input
+                            type="radio"
+                            class="navbar__radio"
+                            name="filter"
+                            value="princess"
+                            id="princess"
+                        />Princess movies
+                    </li>
+                    <li class="navbar__item">
+                        <input
+                            type="radio"
+                            class="navbar__radio"
+                            name="filter"
+                            value="batman"
+                            id="batman"
+                        />Batman movies
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <ul class="container__list"></ul>
+        </main>
+        <script>
+            feather.replace();
+        </script>
+    </body>
 </html>
