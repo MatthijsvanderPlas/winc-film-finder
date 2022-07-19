@@ -1,24 +1,30 @@
 .container {
-    display: block;
-    width: 100%;
-    max-width: 85rem;
-    height: 100%;
+    max-width: 100rem;
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        width: 100%;
         list-style: none;
-        width: fit-content;
-        height: auto;
     }
 
     &__item {
+        margin: 0 auto;
+        max-width: 500px;
         padding: 1rem;
         cursor: pointer;
     }
 
+    &__par {
+        padding: 2rem;
+        margin: 0 auto;
+        font-size: 2rem;
+        color: white;
+    }
+
     &__link {
         position: relative;
+        width: 100%;
+        height: 100%;
         text-decoration: none;
         overflow: hidden;
         z-index: 0;
@@ -27,7 +33,7 @@
             content: "Visit at IMDB:" attr(data-content);
             position: absolute;
             width: 100%;
-            height: 500px;
+            height: 325px;
             z-index: 2;
             color: rgb(241, 224, 29);
             font-size: 2rem;
@@ -35,6 +41,15 @@
             padding-top: 50%;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+@media (min-width: 678px) {
+    .container {
+        &__list {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            justify-content: center;
         }
     }
 }

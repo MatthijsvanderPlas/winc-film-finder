@@ -1,29 +1,53 @@
 .header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 85rem;
-    height: 150px;
 }
 
 .head {
-    flex-basis: 100%;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
-
-    &__icon {
-        color: white;
-        width: 75px;
-        height: 100%;
-        padding-right: 2rem;
-    }
+    padding: 1rem;
 
     &__title {
+        margin: 0 auto;
         color: white;
         font-size: 3rem;
+        cursor: pointer;
+    }
+    &__search {
+        position: relative;
+
+        & input {
+            font-size: 1.25rem;
+            width: 250px;
+            height: 45px;
+            padding: 0 1rem;
+        }
+
+        &-icon {
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            z-index: 2;
+            width: 30px;
+            height: 30px;
+            color: black;
+            cursor: pointer;
+        }
+    }
+}
+@media (min-width: 675px) {
+    .head {
+        &__icon {
+            margin-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        &__search {
+            margin-right: 2rem;
+        }
     }
 }

@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "feather-icons": "^4.29.0",
     "node-sass": "^7.0.1",
     "vite": "^3.0.0"
   }

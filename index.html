@@ -4,15 +4,25 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="./node_modules/feather-icons/dist/feather.js"></script>
-        <script type="module" src="./src/main.js"></script>
+        <script defer type="module" src="./src/main.js"></script>
         <title>Winc Film Finder</title>
     </head>
     <body>
         <header class="header">
             <div class="head">
-                <i data-feather="film" class="head__icon"></i>
                 <h1 class="head__title">Winc Film Finder</h1>
+                <form class="head__search">
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Search movie"
+                    />
+                    <img
+                        src="./src/assets/search.png"
+                        class="head__search-icon"
+                    />
+                </form>
             </div>
             <nav class="navbar">
                 <ul class="navbar__list">
@@ -67,8 +77,5 @@
         <main class="container">
             <ul class="container__list"></ul>
         </main>
-        <script>
-            feather.replace();
-        </script>
     </body>
 </html>
