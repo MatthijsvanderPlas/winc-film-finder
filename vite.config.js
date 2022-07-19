@@ -5,8 +5,8 @@ import { resolve } from 'path'
       css: {
         preprocessorOptions: {
           scss: {
-            additionalData: 
-            `@import "./src/scss/main.scss";`
+            prependData:
+            `@use "@/src/scss/main.scss";`
           }
           }
         }
