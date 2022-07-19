@@ -1,5 +1,5 @@
 import { movies } from "./lib/movies";
-import "./scss/main.scss";
+import "@/scss/main.scss";
 
 const selectorList = [...document.querySelector('.navbar__list').children];
 const searchBar = document.querySelector('.head__search-icon');
